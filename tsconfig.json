@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"declaration": false,
+		"module": "commonjs",
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"newLine": "LF",
+		"outDir": "build",
+		"sourceMap": true,
+		"strictNullChecks": true,
+		"target": "es2015"
+	},
+	"include": [
+		"src/**/*.ts",
+		"test/**/*.ts"
+	]
+}

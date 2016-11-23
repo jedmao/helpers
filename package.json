@@ -1,0 +1,62 @@
+{
+  "name": "jedmao-helpers",
+  "version": "1.0.0",
+  "description": "Functional helpers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run compile && ava",
+    "test:watch": "ava --watch",
+    "compile": "tsc",
+    "compile:watch": "tsc --watch",
+    "cover": "nyc npm test",
+    "cover:watch": "nyc npm run test:watch",
+    "prepublish": "tsc @tsconfig.publish.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jedmao/helpers.git"
+  },
+  "keywords": [
+    "helpers",
+    "typescript"
+  ],
+  "author": "Jed Mao <jedmao@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jedmao/helpers/issues"
+  },
+  "homepage": "https://github.com/jedmao/helpers#readme",
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "nyc": "^10.0.0",
+    "ts-node": "^1.7.0",
+    "typescript": "^2.0.10"
+  },
+  "typings": "dist/helpers.d.ts",
+  "ava": {
+    "files": [
+      "test/**/*.js"
+    ],
+    "source": [
+      "src/**/*.js"
+    ]
+  },
+  "nyc": {
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "include": [
+      "src/**/*.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "cache": true,
+    "all": true,
+    "check-coverage": true,
+    "sourceMap": false,
+    "instrument": false
+  }
+}
